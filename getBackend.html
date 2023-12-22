@@ -3,6 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
+    <!-- https://fonts.google.com/specimen/Roboto -->
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <!-- https://fontawesome.com/ -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- https://getbootstrap.com/ -->
+    <link rel="stylesheet" href="css/templatemo-style.css">
     <style>
         body {
             color: white;
@@ -15,163 +22,241 @@
             background-size: cover;
         }
                 
-                .product-table-container {
-                    max-width: 1400px;
-                    margin: 20px auto;
-                    padding: 20px;
-                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-                    border-radius: 8px;
-                    background-color: white;
-                }
+        .product-table-container {
+            max-width: 1400px;
+            margin: 20px auto;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            background-color: white;
+        }
         
-                h2 {
-                    color: #333;
-                }
+        h2 {
+            color: #333;
+        }
         
-                #productTable {
-                    width: 100%;
-                    border-collapse: collapse;
-                    margin-top: 20px;
-                }
+        #productTable {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
         
-                #productTable th, #productTable td {
-                    padding: 12px;
-                    text-align: left;
-                    border-bottom: 1px solid #ddd;
-                }
+        #productTable th, #productTable td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
         
-                #productTable th {
-                    background-color: #f2f2f2;
-                }
+        #productTableBody td:nth-child(10), #productTableBody td:nth-child(11) {
+            text-align: center;
+            cursor: pointer;
+            color: #007bff;
+        }
         
-                #productTableBody tr:hover {
-                    background-color: #f5f5f5;
-                }
+        #productTableBody td:nth-child(10):hover, #productTableBody td:nth-child(11):hover {
+            text-decoration: underline;
+            color: #0056b3;
+        }
         
-                #productTableBody td img {
-                    max-width: 50px;
-                    max-height: 50px;
-                    object-fit: cover;
-                    border-radius: 50%;
-                }
+        /* Navbar styles */
+        .navbar {
+            overflow: hidden;
+            background-color: #333;
+        }
         
-                #productTableBody td:last-child, #productTableBody th:last-child {
-                    text-align: center;
-                }
+        .navbar a {
+            float: left;
+            font-size: 16px;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
         
-                #productTableBody td:nth-child(9) {
-                    color: green;
-                }
+        .navbar a:hover, .dropdown:hover .dropbtn {
+            background-color: #ddd;
+            color: black;
+        }
         
-                #productTableBody td:nth-child(10), #productTableBody td:nth-child(11) {
-                    text-align: center;
-                    cursor: pointer;
-                    color: #007bff;
-                }
+        .navbar a.active {
+            background-color: #4CAF50;
+            color: white;
+        }
         
-                #productTableBody td:nth-child(10):hover, #productTableBody td:nth-child(11):hover {
-                    text-decoration: underline;
-                    color: #0056b3;
-                }
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
         
-                /* Navbar styles */
-                .navbar {
-                    overflow: hidden;
-                    background-color: #333;
-                }
+        .dropdown .dropbtn {
+            font-size: 16px;  
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
         
-                .navbar a {
-                    float: left;
-                    font-size: 16px;
-                    color: white;
-                    text-align: center;
-                    padding: 14px 16px;
-                    text-decoration: none;
-                }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
         
-                .navbar a:hover, .dropdown:hover .dropbtn {
-                    background-color: #ddd;
-                    color: black;
-                }
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
         
-                .navbar a.active {
-                    background-color: #4CAF50;
-                    color: white;
-                }
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
         
-                .dropdown {
-                    float: left;
-                    overflow: hidden;
-                }
-        
-                .dropdown .dropbtn {
-                    font-size: 16px;  
-                    border: none;
-                    outline: none;
-                    color: white;
-                    padding: 14px 16px;
-                    background-color: inherit;
-                    font-family: inherit;
-                    margin: 0;
-                }
-        
-                .dropdown-content {
-                    display: none;
-                    position: absolute;
-                    background-color: #f9f9f9;
-                    min-width: 160px;
-                    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-                    z-index: 1;
-                }
-        
-                .dropdown-content a {
-                    float: none;
-                    color: black;
-                    padding: 12px 16px;
-                    text-decoration: none;
-                    display: block;
-                    text-align: left;
-                }
-        
-                .dropdown-content a:hover {
-                    background-color: #ddd;
-                }
-        
-                .dropdown:hover .dropdown-content {
-                    display: block;
-                }
-                       
-            </style>
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Apply a box-sizing border-box model to all elements */
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Style the navigation bar */
+        .navbar {
+            background-color: #333;
+        }
+
+        .navbar-brand {
+            color: #fff;
+        }
+
+        .navbar-toggler-icon, .tm-nav-icon {
+            color: #fff;
+        }
+
+        .navbar-nav {
+            text-align: center;
+        }
+
+        .nav-link {
+            color: #fff;
+        }
+
+        /* Style the main content */
+        #reportsPage {
+            padding: 20px;
+        }
+
+        /* Style the responsive table */
+        .table {
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+
+        .table th, .table td {
+            padding: 0.75rem;
+            vertical-align: top;
+            border-top: 1px solid #dee2e6;
+        }
+
+        .cust-footer {
+            bottom: 0;
+            position: absolute;
+            width: 100%;
+        }
+
+        .cust-rounded {
+            border-radius: 260px;
+        }
+        /* Apply styles to different screen sizes */
+        @media (min-width: 576px) {
+            /* Adjust styles for small devices and larger */
+        }
+
+        @media (min-width: 768px) {
+            /* Adjust styles for medium devices and larger */
+        }
+
+        @media (min-width: 992px) {
+            /* Adjust styles for large devices and larger */
+        }
+
+        @media (min-width: 1200px) {
+            /* Adjust styles for extra large devices and larger */
+        }
+    </style>
     <title>Backend Table</title>
 </head>
 <body>
     <div id="mainadminAuthorization"></div>
 
     <!-- Navbar -->
-    <div class="navbar">
-        <a href="./home.html" class="active">Home</a>
+    <nav class="navbar navbar-expand-xl cust-rounded">
 
-        <!-- First Dropdown -->
-        <div class="dropdown">
-            <button class="dropbtn">FRONTEND</button>
-            <div class="dropdown-content">
-                <a href="./createFrontend.html">Input Nilai</a>
-                <a href="./getFrontend.html">Lihat Tabel Nilai</a>
+        <!-- NAVBAR START -->
+        <div class="container h-100">
+            <a class="navbar-brand" href="index.html">
+                <img style="width: auto; height: 46PX;" src="./img/ulbi.png">
+            </a>
+            <button class="navbar-toggler ml-auto mr-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars tm-nav-icon"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto h-100">
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            <i class="far fa-file-alt"></i>
+                            <span>
+                                FRONTEND <i class="fas fa-angle-down"></i>
+                            </span>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="./createFrontend.html">Input Nilai</a>
+                            <a class="dropdown-item" href="./getFrontend.html">Lihat Tabel Nilai</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            <i class="far fa-file-alt"></i>
+                            <span>
+                                BACKEND <i class="fas fa-angle-down"></i>
+                            </span>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="./createBackend.html">Input Nilai</a>
+                            <a class="dropdown-item" href="./getBackend.html">Lihat Tabel Nilai</a>
+                        </div>
+                    </li>
+                    
+                    <li class="nav-item cust-rounded">
+                        <a onclick="Logout()" style="background-color: rgb(66, 36, 36); color: rgb(224, 167, 167);" class="nav-link">
+                            Log Out
+                        </a>
+                    </li>
+
+                </ul>
             </div>
         </div>
-
-        <!-- Second Dropdown -->
-        <div class="dropdown">
-            <button class="dropbtn">BACKEND</button>
-            <div class="dropdown-content">
-                <a href="./createBackend.html">Input Nilai</a>
-                <a href="./getBackend.html">Lihat Tabel Nilai</a>
-            </div>
-        </div>
-    </div>
+    </nav>
 
     <div class="product-table-container">
-        <h2 class="text-white">Tabel Nilai Backtend</h2>
+        <h2>Tabel Nilai Backtend</h2>
         <table style="color: #222933;" id="productTable">
             <thead>
                 <tr>
@@ -191,9 +276,19 @@
         </table>
     </div>
 </body>
+<script src="js/jquery-3.3.1.min.js"></script>
+<!-- https://jquery.com/download/ -->
+<script src="js/moment.min.js"></script>
+<!-- https://momentjs.com/ -->
+<script src="js/Chart.min.js"></script>
+<!-- http://www.chartjs.org/docs/latest/ -->
+<script src="js/bootstrap.min.js"></script>
+<!-- https://getbootstrap.com/ -->
+<script src="js/tooplate-scripts.js"></script>
 
 <script  src="getBackend.js"></script>
 <!-- <script  src="https://cdn.jsdelivr.net/gh/Fancypedia/repojs@0.5.4/cms/getcomment.js"></script> -->
 
 <script type="module" src="./inijs/main.js"></script>
+<script type="module" src="./home.js"></script>
 </html>
