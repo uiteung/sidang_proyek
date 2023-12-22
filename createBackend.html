@@ -31,18 +31,108 @@
 
  <!-- Main Stylesheet -->
  <link rel="stylesheet" href="./inicss/style.css">
+ <style>
+    /* Reset some default styles */
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: white;
+    min-height: 97vh;
+    background: url(./img/theme.webp) no-repeat center center fixed; 
+    background-color: #222933;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+/* Apply a box-sizing border-box model to all elements */
+* {
+    box-sizing: border-box;
+}
+
+/* Style the navigation bar */
+.navbar {
+    background-color: #333;
+}
+
+.navbar-brand {
+    color: #fff;
+}
+
+.navbar-toggler-icon, .tm-nav-icon {
+    color: #fff;
+}
+
+.navbar-nav {
+    text-align: center;
+}
+
+.nav-link {
+    color: #fff;
+}
+
+/* Style the main content */
+#reportsPage {
+    padding: 20px;
+}
+
+/* Style the responsive table */
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.table th, .table td {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+}
+.cust-footer {
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+}
+
+.cust-rounded {
+    border-radius: 260px;
+}
+
+/* Apply styles to different screen sizes */
+@media (min-width: 576px) {
+    /* Adjust styles for small devices and larger */
+}
+
+@media (min-width: 768px) {
+    /* Adjust styles for medium devices and larger */
+}
+
+@media (min-width: 992px) {
+    /* Adjust styles for large devices and larger */
+}
+
+@media (min-width: 1200px) {
+    /* Adjust styles for extra large devices and larger */
+}
+
+</style>
+</head>
 </head>
 
 <body>
     <div id="mainadminAuthorization"></div>
 
     <div id="reportsPage" class="" id="home">
-        <nav style="background-color: rgb(100, 97, 97);" class="navbar navbar-expand-xl">
+        <nav class="navbar navbar-expand-xl cust-rounded">
 
             <!-- NAVBAR START -->
             <div class="container h-100">
-                <a class="navbar-brand" href="./home.html">
-                    <h1 class="tm-site-title mb-0">CMS Admin</h1>
+                <a class="navbar-brand" href="index.html">
+                    <img style="width: auto; height: 46PX;" src="./img/ulbi.png">
                 </a>
                 <button class="navbar-toggler ml-auto mr-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -52,22 +142,19 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mx-auto h-100">
 
-
                         <li class="nav-item dropdown">
-
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">
                                 <i class="far fa-file-alt"></i>
                                 <span>
-                                   FRONT END <i class="fas fa-angle-down"></i>
+                                    FRONTEND <i class="fas fa-angle-down"></i>
                                 </span>
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="./createFrontend.html">Input Nilai Frontend</a>
-                                <a class="dropdown-item" href="./getFrontend.html">Lihat Tabel Nilai Frontend</a>
+                                <a class="dropdown-item" href="./createFrontend.html">Input Nilai</a>
+                                <a class="dropdown-item" href="./getFrontend.html">Lihat Tabel Nilai</a>
                             </div>
                         </li>
-                        
 
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
@@ -78,38 +165,38 @@
                                 </span>
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="./createBackend.html">Input Nilai Backend</a>
-                                <a class="dropdown-item" href="./getBackend.html">Lihat Tabel Nilai Backend</a>
+                                <a class="dropdown-item" href="./createBackend.html">Input Nilai</a>
+                                <a class="dropdown-item" href="./getBackend.html">Lihat Tabel Nilai</a>
                             </div>
                         </li>
-
                         
-                        <li class="nav-item">
-                            <a onclick="Logout()" style="background-color: red;" class="nav-link" href="./qrcode/index.html">
-                                LOGOUT
+                        <li class="nav-item cust-rounded">
+                            <a onclick="Logout()" style="background-color: rgb(66, 36, 36); color: rgb(224, 167, 167);" class="nav-link">
+                                Log Out
                             </a>
                         </li>
-        
+
                     </ul>
-                   
                 </div>
             </div>
         </nav>
+        <!-- NAVBAR END -->
             <!-- NAVBAR END -->
-        <div class="hero is-fullheight" style="background: #F8A556;">
+        <div class="hero is-fullheight">
             <div class="hero-body">
                 <div class="container">
                     <div class="columns is-centered">
-        
+
                         <div class="column is-4">
         
                             <!-- START FORM -->
-                            <div id="signupForm" class="box">
-        
+                            <div id="signupForm" style="border-radius: 25px;" class="box bg-dark text-light">
+                                <h1 style="margin-bottom: 20px; margin-top: 20px" class="text-light">Backend</h1>                                
+                                
                                 <div id="field-username" class="field">
-                                    <label class="label">Npm</label>
+                                    <label class="label text-light">NPM</label>
                                     <div class="control has-icons-left">
-                                        <input id="npm" name="npm" type="number" class="input" placeholder="npm" required>
+                                        <input id="npm" name="npm" type="number" class="input" required>
                                         <span class="icon is-small is-left">
                                             <i class="fa fa-envelope"></i>
                                         </span>
@@ -117,9 +204,9 @@
                                 </div>
         
                                 <div id="field-username" class="field">
-                                    <label class="label">Nama</label>
+                                    <label class="label text-light">Nama</label>
                                     <div class="control has-icons-left">
-                                        <input id="nama" name="nama" type="text" class="input" placeholder="nama" required>
+                                        <input id="nama" name="nama" type="text" class="input" required>
                                         <span class="icon is-small is-left">
                                             <i class="fa fa-envelope"></i>
                                         </span>
@@ -127,9 +214,9 @@
                                 </div>
         
                                 <div id="field-username" class="field">
-                                    <label class="label">Autentikasi Token</label>
+                                    <label class="label text-light">Autentikasi Token</label>
                                     <div class="control has-icons-left">
-                                        <input id="autentikasitoken" name="autentikasitoken" type="text" class="input" placeholder="autentikasitoken" required>
+                                        <input id="autentikasitoken" name="autentikasitoken" type="text" class="input" required>
                                         <span class="icon is-small is-left">
                                             <i class="fa fa-envelope"></i>
                                         </span>
@@ -137,9 +224,9 @@
                                 </div>
         
                                 <div id="field-username" class="field">
-                                    <label class="label">Package Sendiri</label>
+                                    <label class="label text-light">Package yang telah dibuat</label>
                                     <div class="control has-icons-left">
-                                        <input id="packagesendiri" name="packagesendiri" type="text" class="input" placeholder="packagesendiri" required>
+                                        <input id="packagesendiri" name="packagesendiri" type="text" class="input" required>
                                         <span class="icon is-small is-left">
                                             <i class="fa fa-envelope"></i>
                                         </span>
@@ -147,9 +234,9 @@
                                 </div>
         
                                 <div id="field-username" class="field">
-                                    <label class="label">Endpoint GCF Jakarta</label>
+                                    <label class="label text-light">Endpoint GCF Server Jakarta</label>
                                     <div class="control has-icons-left">
-                                        <input id="endpointgcfjakarta" name="endpointgcfjakarta" type="text" class="input" placeholder="endpointgcfjakarta" required>
+                                        <input id="endpointgcfjakarta" name="endpointgcfjakarta" type="text" class="input" required>
                                         <span class="icon is-small is-left">
                                             <i class="fa fa-envelope"></i>
                                         </span>
@@ -157,19 +244,18 @@
                                 </div>
         
                                 <div id="field-username" class="field">
-                                    <label class="label">Integrasi WA my.id</label>
+                                    <label class="label text-light">Integrasi wa.my.id</label>
                                     <div class="control has-icons-left">
-                                        <input id="integrasiwamyid" name="integrasiwamyid" type="text" class="input" placeholder="endpointgcfjakarta" required>
+                                        <input id="integrasiwamyid" name="integrasiwamyid" type="text" class="input" required>
                                         <span class="icon is-small is-left">
                                             <i class="fa fa-envelope"></i>
                                         </span>
                                     </div>
                                 </div>
         
-                                <div id="btnSignup" class="field">
-                                    <button onclick="createBackendFix()" class="button" type="submit"  style="background: #F8A556;">Masukan Nilai Backend</button>
+                                <div style="align-items: center; text-align: center; margin-top: 25px;" id="btnSignup" class="field">
+                                    <button onclick="createBackendFix()" class="button" type="submit"  style="border-radius: 25px;border: 0; background: #5e5e5e; color: #ffffff;">Masukan Nilai</button>
                                 </div>
-        
                             </div>
                             <!-- END FORM -->
         
