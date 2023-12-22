@@ -24,7 +24,7 @@ function deleteBackend() {
       .then(response => {
         if (response.ok) {
           document.getElementById('response').innerText = 'comment deleted successfully';
-          window.location.href = "https://repo.if.ulbi.ac.id/sidang/getBackend.html";
+          window.location.href = "./getBackend.html";
         } else {
           document.getElementById('response').innerText = 'Failed to delete comment';
         }

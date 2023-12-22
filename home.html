@@ -68,7 +68,15 @@ body, html {
     vertical-align: top;
     border-top: 1px solid #dee2e6;
 }
+.cust-footer {
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+}
 
+.cust-rounded {
+    border-radius: 260px;
+}
 /* Apply styles to different screen sizes */
 @media (min-width: 576px) {
     /* Adjust styles for small devices and larger */
@@ -94,7 +102,7 @@ body, html {
 
 
     <div id="reportsPage" class="" id="home">
-        <nav class="navbar navbar-expand-xl">
+        <nav class="navbar navbar-expand-xl cust-rounded">
 
             <!-- NAVBAR START -->
             <div class="container h-100">
@@ -137,9 +145,9 @@ body, html {
                             </div>
                         </li>
                         
-                        <li class="nav-item">
-                            <a onclick="Logout()" style="background-color: red;" class="nav-link">
-                                LOGOUT
+                        <li class="nav-item cust-rounded">
+                            <a onclick="Logout()" style="background-color: rgb(66, 36, 36); color: rgb(224, 167, 167);" class="nav-link">
+                                Log Out
                             </a>
                         </li>
 
@@ -157,15 +165,13 @@ body, html {
             </div>
             
         </div>
-        <!-- <footer class="tm-footer row tm-mt-small">
+        <footer class="tm-footer row tm-mt-small cust-footer">
             <div class="col-12 font-weight-light">
                 <p class="text-center text-white mb-0 px-4 small">
-                    Copyright &copy; <b>2018</b> All rights reserved. 
-                    
-                    Design: <a rel="nofollow noopener" href="" class="tm-footer-link">Fancypedia</a>
-                </p>
+                    Copyright &copy; <b>2023</b> DTI ULBI All rights reserved. 
+                                    </p>
             </div>
-        </footer> -->
+        </footer>
     </div>
     </body>
     <script src="js/jquery-3.3.1.min.js"></script>
@@ -178,17 +184,7 @@ body, html {
     <!-- https://getbootstrap.com/ -->
     <script src="js/tooplate-scripts.js"></script>
     
-
-
-    <!-- <script type="module" src="index.js"></script> -->
-    <!-- <script type="module" src="https://cdn.jsdelivr.net/gh/Fancypedia/repojs@0.2.2/inijs/index.js"></script> -->
-
-
-<!-- JS DIBUAT SENDIRI -->
+    <!-- JS DIBUAT SENDIRI -->
     <script type="module" src="./inijs/main.js"></script>
     <script type="module" src="./home.js"></script>
-    <!-- <script type="module" src="https://cdn.jsdelivr.net/gh/Fancypedia/repojs@0.5.4/cms/inijs/index.js"></script> -->
-
-    <!-- <script type="module" src="./inijs/main.js"></script> -->
-    <!-- <script type="module" src="https://cdn.jsdelivr.net/gh/Fancypedia/repojs@0.5.4/cms/inijs/main.js"></script> -->
 </html>
