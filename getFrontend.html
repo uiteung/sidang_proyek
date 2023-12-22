@@ -4,7 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-
+body {
+    color: white;
+    min-height: 97vh;
+    background: url(./img/theme.webp) no-repeat center center fixed; 
+    background-color: #222933;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
         
         .product-table-container {
             max-width: 1400px;
@@ -12,7 +21,7 @@
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
-            background-color: #fff;
+            background-color: white;
         }
 
         h2 {
@@ -131,6 +140,7 @@
         .dropdown:hover .dropdown-content {
             display: block;
         }
+               
     </style>
     <title>Frontend Table</title>
 
@@ -161,19 +171,19 @@
         </div>
     </div>
 
-    <div class="product-table-container">
-        <h2>Daftar Frontend</h2>
-        <table id="productTable">
+    <div class="product-table-container text-white">
+        <h2 class="text-white">Daftar Frontend</h2>
+        <table style="color: #222933;" id="productTable">
             <thead>
                 <tr>
                     <!-- <th>ID</th> -->
-                    <th>Dosen</th>
-                    <th>Npm</th>
-                    <th>Nama</th>
-                    <th>Rilisjs</th>
-                    <th>Pemanggilanjs</th>
-                    <th>Kelengkapancss</th>
-                    <th>CustomDomain</th>
+                    <th>Nama Dosen</th>
+                    <th>NMP</th>
+                    <th>Nama Mahasiswa</th>
+                    <th>JS Telah di rilis</th>
+                    <th>JS sebagai Module</th>
+                    <th>Kelengkapan CSS</th>
+                    <th>Penggunaan Custom Domain</th>
                     <th>Status</th>
                     <th>Edit</th>
                     <th>Delete</th>
