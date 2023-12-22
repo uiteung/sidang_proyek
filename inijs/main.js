@@ -30,6 +30,3 @@ if (previewadminAuthorization) {
 } else {
     console.log("Element with ID 'mainadminAuthorization' not found. adminAuthorization not executed.");
 }
-// window.createBackend = createBackend;
-// window.editFrontend = editFrontend;
-// window.editBackend = editBackend;
