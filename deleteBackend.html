@@ -54,21 +54,12 @@ h1 {
   <div id="mainadminAuthorization"></div>
 
   <div class="container">
-
-    <nav>
-      <ul class="navbar">
-        <li><a href="./getBackend.html">Get Backend</a></li>
-      </ul>
-    </nav>
-
-    <h1>Delete Backend</h1>
-    <p>Enter NPM to delete:</p>
-    <input readonly type="text" id="backendID" placeholder="Enter NPM">
-    <button onclick="deleteBackend()">Delete</button>
+    <h1>Hapus data?</h1>
+    <input hidden type="text" id="backendID" placeholder="Enter NPM">
+    <button class="button-danger" onclick="deleteBackend()">Ya</button>
+    <a href="./getFrontend.html"><button class="button-safe">Tidak</button></a></li>
     <p id="response"></p>
   </div>
-
-
 
   <script src="scriptdeleteBackend.js"></script>
   <!-- <script src="https://cdn.jsdelivr.net/gh/Fancypedia/repojs@0.5.4/cms/scriptdeletecomment.js"></script> -->
