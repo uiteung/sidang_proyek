@@ -27,7 +27,7 @@ function responseData(result) {
 
     if (result.status == true) {
         alert("Berhasil Input Data");
-        window.location.href = "../getFrontend.html";
+        window.location.href = "./getFrontend.html";
     }else{
         alert('gagal input data');
         console.log("gagal");
