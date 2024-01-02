@@ -194,6 +194,12 @@
         @media (min-width: 1200px) {
             /* Adjust styles for extra large devices and larger */
         }
+        .center-nav-text {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
     </style>
     <title>Frontend Table</title>
 
@@ -207,53 +213,13 @@
 
             <!-- NAVBAR START -->
             <div class="container h-100">
-                <a class="navbar-brand" href="index.html">
-                    <img style="width: auto; height: 46PX;" src="./img/ulbi.png">
+                <a class="navbar-brand" href="home.html">
+                    <span class="center-nav-text">Kembali</span>
                 </a>
                 <button class="navbar-toggler ml-auto mr-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fas fa-bars tm-nav-icon"></i>
                 </button>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mx-auto h-100">
-
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">
-                                <i class="far fa-file-alt"></i>
-                                <span>
-                                    FRONTEND <i class="fas fa-angle-down"></i>
-                                </span>
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="./createFrontend.html">Input Nilai</a>
-                                <a class="dropdown-item" href="./getFrontend.html">Lihat Tabel Nilai</a>
-                            </div>
-                        </li>
-
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">
-                                <i class="far fa-file-alt"></i>
-                                <span>
-                                    BACKEND <i class="fas fa-angle-down"></i>
-                                </span>
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="./createBackend.html">Input Nilai</a>
-                                <a class="dropdown-item" href="./getBackend.html">Lihat Tabel Nilai</a>
-                            </div>
-                        </li>
-                        
-                        <li class="nav-item cust-rounded">
-                            <a onclick="Logout()" style="background-color: rgb(66, 36, 36); color: rgb(224, 167, 167);" class="nav-link">
-                                Log Out
-                            </a>
-                        </li>
-
-                    </ul>
-                </div>
             </div>
         </nav>
 
